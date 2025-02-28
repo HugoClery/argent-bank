@@ -1,7 +1,8 @@
+// @ts-nocheck
 import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
-import Logo from "../asset/images/argentBankLogo.webp"
+import Logo from "../assets/images/argentBankLogo.webp";
 import { logout } from "../store/slices/auth.slice";
 import { loadUserProfile } from "../store/slices/api";
 import "../sass/components/_Header.scss";
