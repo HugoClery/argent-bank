@@ -13,8 +13,8 @@ function Header() {
   const dispatch = useDispatch();
 
   const handleLogout = () => {
-    localStorage.removeItem("token");
     dispatch(logout());
+    localStorage.removeItem("token");
   };
 
   useEffect(() => {
@@ -35,7 +35,11 @@ function Header() {
               <i className="fa-solid fa-2x fa-circle-user" />
               {user?.userName}
             </Link>
-            <Link to="/" onClick={handleLogout}>
+            <Link to="/" onClick={(e) => {
+              e.preventDefault();
+              handleLogout();
+              window.location.href = '/';
+            }}>
               <i className="fa-solid fa-arrow-right-from-bracket" />
               <p> Sign out </p>
             </Link>

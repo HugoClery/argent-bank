@@ -53,7 +53,7 @@ export const loadUserProfile = (token) => async (dispatch) => {
   };
 
   try {
-    const response = await Axios.post(url, null, config);
+    const response = await Axios.get(url, config);
 
     if (response.status === 200) {
       const { firstName, lastName, userName } = response.data.body;
