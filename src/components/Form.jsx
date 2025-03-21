@@ -38,7 +38,7 @@ function Form() {
           sessionStorage.setItem("rememberedPassword", password);
         }
 
-        navigate("/user");
+        navigate("/profile");
       }
     } catch (error) {
       setError("Erreur dans l'email et/ou le mot de passe");

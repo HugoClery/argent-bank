@@ -31,7 +31,7 @@ function Header() {
         </Link>
         {token ? (
           <div className="connected">
-            <Link to="/user">
+            <Link to="/profile">
               <i className="fa-solid fa-2x fa-circle-user" />
               {user?.userName}
             </Link>
